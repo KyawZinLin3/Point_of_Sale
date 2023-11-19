@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="822.0" style="-fx-background-color: #ef9a9a;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFxmlController">
+   <children>
+      <GridPane layoutX="412.0" layoutY="47.0" prefHeight="484.0" prefWidth="346.0" style="-fx-background-color: black;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.60003662109375" minWidth="10.0" prefWidth="39.5999755859375" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.999951171875" minWidth="10.0" prefWidth="275.999951171875" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.4000244140625" minWidth="10.0" prefWidth="20.400048828125023" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fitHeight="165.0" fitWidth="243.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowSpan="2">
+               <image>
+                  <Image url="@../images/pos.jpg" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtuname" alignment="CENTER" promptText="enter username" styleClass="textfield" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <RadioButton fx:id="rdAdmin" mnemonicParsing="false" text="Admin" textFill="#eae2e2" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="rdtype" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rdCashier" mnemonicParsing="false" text="Cashier" textFill="#e4d7d7" toggleGroup="$rdtype" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </RadioButton>
+            <Button fx:id="btnLogin" alignment="CENTER" mnemonicParsing="false" onAction="#btnLoginAction" prefHeight="44.0" prefWidth="184.0" text="Login" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="txtpwd" alignment="CENTER" promptText="password" styleClass="textfield" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </GridPane>
+      <Label layoutX="10.0" layoutY="120.0" prefHeight="55.0" prefWidth="390.0" text="Point Of Sale System">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="44.0" layoutY="203.0" prefHeight="26.0" prefWidth="311.0" text="Made for Your Retail Operation">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="571.0" text="Developed by ITPEC Students">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="16.0" layoutY="573.0" prefHeight="22.0" prefWidth="151.0" text="Copyright@ ITPEC345" />
+   </children>
+</AnchorPane>
